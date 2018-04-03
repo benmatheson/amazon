@@ -427,7 +427,7 @@ function sent(el, data, color, yr) {
 
 const svg = d3.select(el).append("svg")
 	.attr("width", 200)
-	.attr("height", 300)
+	.attr("height", 200)
 
 const svgG = svg.append("g");
 
@@ -516,6 +516,99 @@ sent("#sentEl19", y2016, 'blue',2016)
 
 
 })
+
+
+d3.csv("data/fearSenti.csv", function(data){
+
+const f1997 = data.filter(d=>d.year==1997);
+const f1998 = data.filter(d=>d.year==1998);
+const f1999 = data.filter(d=>d.year==1999);
+const f2000 = data.filter(d=>d.year==2000);
+const f2001 = data.filter(d=>d.year==2001);
+const f2002 = data.filter(d=>d.year==2002);
+const f2003 = data.filter(d=>d.year==2003);
+const f2004 = data.filter(d=>d.year==2004);
+const f2005 = data.filter(d=>d.year==2005);
+const f2006 = data.filter(d=>d.year==2006);
+const f2007 = data.filter(d=>d.year==2007);
+const f2008 = data.filter(d=>d.year==2008);
+const f2009 = data.filter(d=>d.year==2009);
+const f2010 = data.filter(d=>d.year==2010);
+const f2011 = data.filter(d=>d.year==2011);
+const f2012 = data.filter(d=>d.year==2012);
+const f2013 = data.filter(d=>d.year==2013);
+const f2014 = data.filter(d=>d.year==2014);
+const f2015 = data.filter(d=>d.year==2015);
+const f2016 = data.filter(d=>d.year==2016);
+
+const x3 = d3.scaleLinear().domain([0,1000]).range([20,620]);
+
+
+function fear(el, data, color, yer) {
+
+const svg3 = d3.select(el).append("svg")
+	.attr("width", 700)
+	.attr("height", 75)
+
+const svgG3 = svg3.append("g");
+
+console.log("EXECTING");
+
+svgG3.selectAll('rect')
+	.data(data)
+	.enter()
+	.append('rect')
+	.attr('x', 0)
+	.attr('y', 20)
+	.attr('height', 18)
+	.attr("width", 2)
+	.attr("opacity", .4)
+	.attr("fill", color)
+	.transition()
+	.delay((d,i) =>i*150)
+	.attr("x", (d,i)=>x3((d.linenumber)))
+	.attr("y", (d,i)=>20)
+
+	svgG3.append('text')
+	.text(yer)
+	.attr("x", 1)
+	.attr("y", 14)
+	.attr("class", "anno")
+
+}
+
+
+fear("#f1997", f1997, "red", 1997);
+fear("#f1998", f1998, "red", 1998);
+fear("#f1999", f1999, "red", 1999);
+fear("#f2000", f2000, "red", 2000);
+fear("#f2001", f2001, "red", 2001);
+fear("#f2002", f2002, "red", 2002);
+fear("#f2003", f2003, "red", 2003);
+fear("#f2004", f2004, "red", 2004);
+fear("#f2005", f2005, "red", 2005);
+fear("#f2006", f2006, "red", 2006);
+fear("#f2007", f2007, "red", 2007);
+fear("#f2008", f2008, "red", 2008);
+fear("#f2009", f2009, "red", 2009);
+fear("#f2010", f2010, "red", 2010);
+fear("#f2011", f2011, "red", 2011);
+fear("#f2012", f2012, "red", 2012);
+fear("#f2013", f2013, "red", 2013);
+fear("#f2014", f2014, "red", 2014);
+fear("#f2015", f2015, "red", 2015);
+fear("#f2016", f2016, "red", 2016);
+
+console.log(f1997);
+
+})
+
+
+
+
+
+
+
 
 
 
