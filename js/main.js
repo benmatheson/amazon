@@ -37,21 +37,182 @@
 // *add polarity test? https://www.rdocumentation.org/packages/qdap/versions/2.2.9/topics/polarity
 
 
-const descriptions = {
 
-"groc": "same convenient home delivery on a great selection of prepared foods and specialty items. We’ll continue our methodical approach – measuring and refining Amazon Fresh – with the goal of bringing this incredible service to more cities over time.", 
-"kindle": "2007: If our tools make information snacking easier, we’ll shift more toward information snacking and away from long-form reading. Kindle is purpose-built for long-form reading. We hope Kindle and its successors may gradually and incrementally move us over years into a world with longer spans of attention, providing a counterbalance to the recent proliferation of info-snacking tools.",
-"phone": "also phone",
-"aws": "2010: ..advanced machine learning techniques provide more accurate classification and can self-heal to adapt to changing conditions. For example, our search engine employs data mining and machine learning algorithms that run in the background to build topic models, and we apply information extraction algorithms to identify attributes and extract entities from unstructured descriptions, allowing customers to narrow their searches and quickly find the desired product.",
-"dot": "Amazon's pushin",
-"wf": "We will have to wait until the 2017 letter comes out this spring to hear about the $13 billion dollar purchase of Whole Foods.",
-"prime": "2014:Ten years ago, we launched Amazon Prime, originally designed as an all-you-can-eat free and fast shipping program. We were told repeatedly that it was a risky move, and in some ways it was. In its first year, we gave up many millions of dollars in shipping revenue, and there was no simple math to show that it would be worth it. Our decision to go ahead was built on the positive results we’d seen earlier when we introduced Free Super Saver Shipping, and an intuition that customers would quickly grasp that they were being offered the best deal in the history of shopping. In addition, analysis told us that, if we achieved scale, we would be able to significantly lower the cost of fast shipping."
+
+    var typed1 = new Typed('#testDiv', {
+    strings: ["xx", "To Our Shareholders,^800 \n \n  Amazon.com passed many milestones in 1997.","To our shareholders, customers, and employees: The last 3½ years have been exciting. (1998) ","To our shareholders: The first 4½ years of our journey have yielded some amazing results. (1999)","To our shareholders: Ouch. It’s been a brutal year for many in the capital markets and certainly for Amazon.com shareholders. (2000)", "To our shareholders: In July of last year, Amazon.com reached an important way station.", "To our shareholders: In many ways, Amazon.com is not a normal store.","To our shareholders: Long-term thinking is both a requirement and an outcome of true ownership.","To our shareholders: Our ultimate financial measure, and the one we most want to drive over the long-term, is free cash flow per share.(2004)","To our shareholders: Many of the important decisions we make at Amazon.com can be made with data. (2005)", "“Jeff, what does Day 2 look like?”(2016)"],
+    typeSpeed:10,
+    backSpeed: 0,
+    smartBackspace: true,
+    fadeOut: false,
+    loop: false
+  });
+
+
+
+
+
+
+
+
+
+
+
+// var textArr = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.1", "Making the text a bit longerstring2", "how do you actually feela bout thie longer text string3", "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?", " Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?", "but whatever",  "ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur", "beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos quit", "ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", "this is teh actually last one", "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.", "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem" ];
+
+// var spanArr = ["s1", "s2", "s3", "s4", "s5", "s6" ]; 
+
+// function textRefresh () {
+
+// var selectedTextInd = Math.floor( Math.random()*textArr.length);
+// var selectedSpanInd =   Math.floor( Math.random()*spanArr.length);
+  
+// console.log(selectedTextInd);
+// console.log(selectedSpanInd);
+  
+  
+// var selectedText = textArr[selectedTextInd];
+// var selectedSpan = spanArr[selectedSpanInd];
+
+  
+// // var selectParse = `'#${selectedSpan}'`;
+//  var selectParse = selectedSpan;
+//  var selectedSpanEl = document.getElementById(selectParse);
+  
+  
+//  console.log(selectedText);
+// console.log(selectedSpan);
+  
+// selectedSpanEl.innerHTML= selectedText;
+
+// }
+
+// setInterval(textRefresh, 550);
+
+
+
+
+
+var textArr1 = ['v','e','g','n','u','m','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a']
+var textArr2 = ['q','m','p','z','v','e','g','n','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','d','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','m']
+var textArr3 = ['v','e','g','n','u','y','j','f','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p',,'w', 'n','z','v','e','g','n','f','m','v','d','e','t','q','5','u','r', 'q', 'b','y','j','h','g','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','g','n','u','c','y','d','a','n','u','c','y','d','a']
+var textArr4 = ['f','m','v','d','e','a','j','k','x','e','g','n','u','y','j','c','d','b','d','v','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','z']
+var textArr5 = ['v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v', 'v','x','g','n','u','y','j','h','g','f','x','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','o']
+var textArr6 = ['j','h','g','f','m','b','v','e','w','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','n']
+
+// var spanArr = ["s1", "s2", "s3", "s4", "s5", "s6" ]; 
+
+// function textInsert (arr, span) {
+
+  
+//  var selectedSpanEl = document.getElementById(span);
+//   var i=0;
+
+
+// function update () {
+// selectedSpanEl.innerHTML= selectedText;
+
+// }
+
+
+// function iPlus (){
+
+// 	i++;
+// 	console.log(i);
+
+// }
+
+// while (i < arr.length) {
+
+// var selectedText = arr[i];
+// setTimeout(update(),1200)
+// setTimeout(iPlus(), 1200)
+
+// }
+
+// }
+ 
+
+//  textInsert(textArr1, "span1");
+
+// setInterval(textRefresh, 550);
+
+
+var upFunc = function(arr, span){
+	var i=0;
+	while (i<arr.length) {
+
+		(function(i){
+			
+
+
+
+			setTimeout(function(){
+		
+			var selectedText = arr[i];
+ var selectedSpanEl = document.getElementById(span);
+	selectedSpanEl.innerHTML= selectedText;
+
+
+
+			}, 120*i)
+
+		})(i++)
+
+	}
 
 }
 
 
+upFunc(textArr1, "span1");
+upFunc(textArr2, "span2");
+upFunc(textArr3, "span3");
+upFunc(textArr4, "span4");
+upFunc(textArr5, "span5");
+upFunc(textArr6, "span6");
 
-console.log(descriptions.groc)
+// var myFunc01 = function() {
+//   var i = 0;
+//   while (i < 100) {
+//     (function(i) {
+//       setTimeout(function() {
+//         document.getElementById('d01').innerHTML += 100 - i + "<br>";
+//       }, 1000 * i)
+//     })(i++)
+//   }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const descriptions = {
+
+// "groc": "same convenient home delivery on a great selection of prepared foods and specialty items. We’ll continue our methodical approach – measuring and refining Amazon Fresh – with the goal of bringing this incredible service to more cities over time.", 
+// "kindle": "2007: If our tools make information snacking easier, we’ll shift more toward information snacking and away from long-form reading. Kindle is purpose-built for long-form reading. We hope Kindle and its successors may gradually and incrementally move us over years into a world with longer spans of attention, providing a counterbalance to the recent proliferation of info-snacking tools.",
+// "phone": "also phone",
+// "aws": "2010: ..advanced machine learning techniques provide more accurate classification and can self-heal to adapt to changing conditions. For example, our search engine employs data mining and machine learning algorithms that run in the background to build topic models, and we apply information extraction algorithms to identify attributes and extract entities from unstructured descriptions, allowing customers to narrow their searches and quickly find the desired product.",
+// "dot": "Amazon's pushin",
+// "wf": "We will have to wait until the 2017 letter comes out this spring to hear about the $13 billion dollar purchase of Whole Foods.",
+// "prime": "2014:Ten years ago, we launched Amazon Prime, originally designed as an all-you-can-eat free and fast shipping program. We were told repeatedly that it was a risky move, and in some ways it was. In its first year, we gave up many millions of dollars in shipping revenue, and there was no simple math to show that it would be worth it. Our decision to go ahead was built on the positive results we’d seen earlier when we introduced Free Super Saver Shipping, and an intuition that customers would quickly grasp that they were being offered the best deal in the history of shopping. In addition, analysis told us that, if we achieved scale, we would be able to significantly lower the cost of fast shipping."
+
+// }
+
+
+
+// console.log(descriptions.groc)
 
 
 function app (product) {
@@ -565,6 +726,7 @@ svgG3.selectAll('rect')
 	.attr("opacity", .4)
 	.attr("fill", color)
 	.transition()
+	.duration(1500)
 	.delay((d,i) =>i*150)
 	.attr("x", (d,i)=>x3((d.linenumber)))
 	.attr("y", (d,i)=>20)

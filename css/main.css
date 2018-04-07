@@ -114,6 +114,21 @@ font-size: 1.3rem;
 color: #333333;
 }
 
+.big {
+font-size: 4rem;
+text-align: center;
+
+
+}
+
+.spanText {
+font-size: 11rem;
+text-align: center;
+font-family: "IBM Plex Mono", monospace;
+transition: ease all 1s;
+
+}
+
 .centerNorm {
 
 margin: auto;
@@ -164,20 +179,81 @@ background-blend-mode: difference;
 
 .subHeader {
 
-position: absolute;
-top: 26%;
-left:12%;
-line-height: 80%;
-font-size: 1.2rem;
+/*position: absolute;*/
+/*top: 26%;
+left:12%;*/
+margin: auto;
+line-height: 100%;
+text-align: center;
+font-size: 2.2rem;
 font-weight: 400;
 font-family: "IBM Plex Serif";
+margin-bottom: 2%;
 
 
 }
 
+#two{
+color: red;
+
+}
+
+.trans {
+
+font-family: "IBM Plex Mono", monospace;
+font-size: 4px;
+
+}
+
+#transDiv {
+     background:
+    url('Amazon_Smile_logo.jpg') center center no-repeat;
+
+background-size: contain;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+position: absolute;
+left: 10px;
+top: 5px;
+}
 
 
+#testDiv {
 
+width: 80%;
+margin: auto;
+height: 60vh;
+/*color: white;*/
+/*background-color: black;*/
+font-family: 'IBM Plex Mono', monospace;
+font-size: 2rem;
+font-weight: 700;
+margin-top: 5%;
+/*border: dashed gray 2px;*/
+box-shadow: .9px 3px 9px rgba(0,0,0,.34);
+
+padding: 2%;
+padding-top: 10%;
+padding-left: 5%;
+padding-right: 5%;
+
+}
+
+.smile1{
+position: absolute;
+top: 29%;
+left:10%;
+width: 50%;
+z-index: -100;
+opacity: 1;
+/*display: inline;*/
+/*animation-name: smileAni;
+animation-fill-mode: forwards;
+
+animation-delay: 8.6s;
+animation-duration: 1s;*/
+
+}
 
 
 
@@ -219,7 +295,8 @@ h1, h2 {
 font-family: "IBM Plex Sans";
 font-style: italic;
 margin:auto;
-width: 700px;
+/*width: 700px;*/
+width: 80%;
 }
 
 
@@ -227,6 +304,14 @@ h2.sub {
 
  font-style: normal;
  font-size: 1.9rem;
+ margin-top: 2%;
+
+}
+
+h1.sub {
+
+ font-style: normal;
+ font-size: 3rem;
  margin-top: 2%;
 
 }
@@ -356,6 +441,13 @@ font-style: italic;
 font-weight: 900;
 font-size: 7;
 font-family: "IBM Plex Sans", sans-serif;
+
+}
+
+.it {
+
+font-style: italic;
+
 
 }
 
