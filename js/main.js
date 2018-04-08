@@ -28,7 +28,8 @@
 //grocery thing
 
 
-
+console.log("SCROOMLANG");
+console.log(ScrollMagic);
 
 
 // *add teh product hover thing to the list of VIS
@@ -93,12 +94,23 @@
 
 
 
-var textArr1 = ['v','e','g','n','u','m','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a']
-var textArr2 = ['q','m','p','z','v','e','g','n','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','d','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','m']
-var textArr3 = ['v','e','g','n','u','y','j','f','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p',,'w', 'n','z','v','e','g','n','f','m','v','d','e','t','q','5','u','r', 'q', 'b','y','j','h','g','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','g','n','u','c','y','d','a','n','u','c','y','d','a']
-var textArr4 = ['f','m','v','d','e','a','j','k','x','e','g','n','u','y','j','c','d','b','d','v','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','z']
-var textArr5 = ['v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v', 'v','x','g','n','u','y','j','h','g','f','x','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','o']
-var textArr6 = ['j','h','g','f','m','b','v','e','w','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','n']
+var textArr1 = ['v','e','u','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','D']
+var textArr2 = ['q','m','p','z','v','e','g','n','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','d','5','y','j','h','g','f','c','q','c','y','h','g','f','c','q','m','p','z','v','e','g','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','e']
+var textArr3 = ['j','f','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v', 'n','z','v','e','g','n','f','m','v','d','e','t','q','5','u','r', 'q', 'b','y','j','h','g','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','g','n','u','c','y','a']
+var textArr4 = ['f','m','v','d','e','a','j','k','x','e','g','n','u','y','j','c','d','b','d','v','h','g','f','m','v','d','e','t','q','5','y','j','h','g','e','g','n','u','c','y','h','g','f','m','v','d','e','t','q','5','y','j','v','e','g','n','u','c','y','d','r']
+var textArr5 = ['v','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','f','c','q','m','p','z','v', 'v','x','g','n','u','y','j','h','g','f','x','v','d','e','t','q','5','y','j','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','a','q','m','p','z','v','e','g','n','u','c','y','d','S']
+var textArr6 = ['j','h','g','f','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','h']
+var textArr7 = ['j','h','g','f','m','b','v','e','w','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','a']
+var textArr8 = ['j','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','n','u','c','y','d','r']
+var textArr9 = ['j','h','g','f','m','b','v','e','w','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','e']
+var textArr10 = ['j','f','g','f','m','v','d','e','t','q','5','y','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','h']
+var textArr11 = ['g','n','u','y','j','c','d','b','d','v','h','g','f','m','v','d','e','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','d','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','o']
+var textArr12 = ['v','e','u','c','y','h','g','f','c','q','m','f','m','v','d','e','t','q','5','y','j','h','g','f','c','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','l']
+var textArr13 = ['m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','d']
+var textArr14 = ['j','h','g','f','m','b','v','e','w','n','u','y','j','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','e','g','c','y','d','e']
+var textArr15 = ['f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','r']
+var textArr16 = ['j','h','h','g','f','m','v','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','d','a','m','p','z','v','e','g','n','u','c','y','d','n','z','v','e','g','n','u','c','y','d','s']
+var textArr17 = ['5','y','j','h','g','f','c','q','m','p','z','v','e','g','n','u','c','y','h','g','d','e','t','q','5','y','j','h','g','f','c','q','v','e','g','n','u','c','y','d',',']
 
 // var spanArr = ["s1", "s2", "s3", "s4", "s5", "s6" ]; 
 
@@ -155,7 +167,7 @@ var upFunc = function(arr, span){
 
 
 
-			}, 120*i)
+			}, 40*i)
 
 		})(i++)
 
@@ -170,6 +182,17 @@ upFunc(textArr3, "span3");
 upFunc(textArr4, "span4");
 upFunc(textArr5, "span5");
 upFunc(textArr6, "span6");
+upFunc(textArr7, "span7");
+upFunc(textArr8, "span8");
+upFunc(textArr9, "span9");
+upFunc(textArr10, "span10");
+upFunc(textArr11, "span11");
+upFunc(textArr12, "span12");
+upFunc(textArr13, "span13");
+upFunc(textArr14, "span14");
+upFunc(textArr15, "span15");
+upFunc(textArr16, "span16");
+upFunc(textArr17, "span17");
 
 // var myFunc01 = function() {
 //   var i = 0;
@@ -305,6 +328,9 @@ const stockSvgG = stockSvg.append("g");
 
 var parseTime = d3.timeParse("%Y-%m-%d");
 
+// ##stock fucntion
+
+
 
 d3.csv("data/az_week.csv", function(d){
 	d.Date = parseTime(d.Date);
@@ -330,6 +356,8 @@ const yStock = d3.scaleLinear().domain(stockYEx).range([600, 0]);
 const stockLine = d3.line()
 					.x(d=>xStock(d.Date))
 					.y(d=> yStock(d.Close));
+
+		function executeStock () {			
 
 	const stockLineDef = stockSvgG.append("path")
       .datum(data)
@@ -434,6 +462,18 @@ stockSvgG.append('text')
 		.attr("opacity", 1)
 
 
+}
+
+	var scene1 = new ScrollMagic.Scene({
+
+			triggerElement: "#stockTrigger",
+			duration: 900}).addTo(controller)
+	// .setClassToggle("#bars", "fade")
+		.on("start", function () {
+				executeStock()});
+
+
+scene1.reverse(false);
 
 
 })
@@ -530,7 +570,7 @@ svgG.append("text")
 
 
 	}
-
+function executeTerm () {
 term("#term1", prime, "#472836")
 term("#term2", book, "#3D394D")
 term("#term4", kindle, "#244B58")
@@ -539,7 +579,18 @@ term("#term5", relentless, '#3A653D')
 term("#term6", phone, "#666A2B")
 term("#term7", data, "#956831")
 term("#term8", aws, "darkorange")
+}
 
+	var scene2 = new ScrollMagic.Scene({
+
+			triggerElement: "#termTrigger",
+			duration: 900}).addTo(controller)
+	// .setClassToggle("#bars", "fade")
+		.on("start", function () {
+				executeTerm()});
+
+
+scene2.reverse(false);
 
 
 
@@ -623,7 +674,7 @@ svgG.selectAll('rect')
 
 svgG.append('text')
 	.text(yr)
-	.attr("x", 10)
+	.attr("x", 18)
 	.attr("y", 20)
 	.attr("class", "anno")
 
@@ -637,16 +688,25 @@ svgG.append('g')
 
 
 svgG.append('text')
-	.text(3)
+	.text(+5)
 	.attr("x", 0)
-	.attr("y", 200-y2(3))
+	.attr("y", 200-y2(5))
 	.attr("class", "annoSent")
+
+svgG.append('text')
+	.text(-5)
+	.attr("x", 0)
+	.attr("y", 200-y2(-5))
+	.attr("class", "annoSent")
+
 
 
 
 }
 
 
+
+function executeSenti () {
 sent("#sentEl1", y1997, 'red', 1997)
 sent("#sentEl2", y1998, 'blue', 1998)
 sent("#sentEl3", y1999, 'blue', 1999)
@@ -666,10 +726,21 @@ sent("#sentEl15", y2012, 'blue', 2012)
 sent("#sentEl16", y2013, 'blue', 2013)
 sent("#sentEl17", y2014, 'blue', 2014)
 sent("#sentEl18", y2015, 'blue', 2015)
-sent("#sentEl19", y2016, 'blue',2016)
+sent("#sentEl19", y2016, 'blue', 2016)
+
+}
 
 
+	var scene4 = new ScrollMagic.Scene({
 
+			triggerElement: "#sentiTrigger",
+			duration: 900}).addTo(controller)
+	// .setClassToggle("#bars", "fade")
+		.on("start", function () {
+				executeSenti()});
+
+
+scene4.reverse(false);
 
 
 
@@ -702,14 +773,14 @@ const f2014 = data.filter(d=>d.year==2014);
 const f2015 = data.filter(d=>d.year==2015);
 const f2016 = data.filter(d=>d.year==2016);
 
-const x3 = d3.scaleLinear().domain([0,1000]).range([20,620]);
+const x3 = d3.scaleLinear().domain([0,1000]).range([60,620]);
 
 
 function fear(el, data, color, yer) {
 
 const svg3 = d3.select(el).append("svg")
 	.attr("width", 700)
-	.attr("height", 75)
+	.attr("height", 26)
 
 const svgG3 = svg3.append("g");
 
@@ -720,26 +791,27 @@ svgG3.selectAll('rect')
 	.enter()
 	.append('rect')
 	.attr('x', 0)
-	.attr('y', 20)
+	.attr('y', 0)
 	.attr('height', 18)
 	.attr("width", 2)
 	.attr("opacity", .4)
 	.attr("fill", color)
 	.transition()
 	.duration(1500)
-	.delay((d,i) =>i*150)
+	.delay((d,i) =>i*100)
 	.attr("x", (d,i)=>x3((d.linenumber)))
-	.attr("y", (d,i)=>20)
+	.attr('y', 0)
 
 	svgG3.append('text')
 	.text(yer)
 	.attr("x", 1)
-	.attr("y", 14)
+	.attr("y", 15)
 	.attr("class", "anno")
 
 }
 
 
+function executeFear () {
 fear("#f1997", f1997, "red", 1997);
 fear("#f1998", f1998, "red", 1998);
 fear("#f1999", f1999, "red", 1999);
@@ -761,13 +833,23 @@ fear("#f2014", f2014, "red", 2014);
 fear("#f2015", f2015, "red", 2015);
 fear("#f2016", f2016, "red", 2016);
 
-console.log(f1997);
+}
+
+	var scene3 = new ScrollMagic.Scene({
+
+			triggerElement: "fearTrigger",
+			duration: 900}).addTo(controller)
+	// .setClassToggle("#bars", "fade")
+		.on("start", function () {
+				executeFear()});
+
+
+scene3.reverse(false);
 
 })
 
 
-
-
+var controller = new ScrollMagic.Controller();
 
 
 
