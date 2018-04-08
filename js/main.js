@@ -662,7 +662,7 @@ svgG.selectAll('rect')
 	.attr('x', (d,i)=>i*4)
 	.attr("y", d=>200-y2(0))
 		.attr("width",3)
-	.attr("fill", d=> d.sentiment>0 ? "#2C3B4C" : "#793E3C")
+	.attr("fill", d=> d.sentiment>0 ? "#1a9850" : "#b2182b")
 	.attr("opacity", .5)
 	.transition()
 	.attr("transform", "translate(" + 20 + "," + 0 + ")")
@@ -798,7 +798,7 @@ svgG3.selectAll('rect')
 	.attr("fill", color)
 	.transition()
 	.duration(1500)
-	.delay((d,i) =>i*100)
+	.delay((d,i) =>i*50)
 	.attr("x", (d,i)=>x3((d.linenumber)))
 	.attr('y', 0)
 
@@ -832,13 +832,14 @@ fear("#f2013", f2013, "red", 2013);
 fear("#f2014", f2014, "red", 2014);
 fear("#f2015", f2015, "red", 2015);
 fear("#f2016", f2016, "red", 2016);
+console.log("EXECUTING FEAR FUNCTION");
 
 }
 
 	var scene3 = new ScrollMagic.Scene({
 
-			triggerElement: "fearTrigger",
-			duration: 900}).addTo(controller)
+			triggerElement: "#fearTrigger",
+			duration: 100}).addTo(controller)
 	// .setClassToggle("#bars", "fade")
 		.on("start", function () {
 				executeFear()});
