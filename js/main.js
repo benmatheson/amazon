@@ -307,18 +307,21 @@ rem();
 
 
 
-
+const inW = window.innerWidth;
+console.log(inW);
 
 const margin = {top: 20, right: 20, bottom: 30, left: 50};
 
- const stockWidth = 700 - margin.left - margin.right;
+
+ const stockWidth = inW - margin.left - margin.right;
  const stockHeight = 650 - margin.top - margin.bottom;
 
 
 const stockSvg = d3.select('#stock')
 	.append('svg')
 	.attr('width', stockWidth)
-	.attr('height', stockHeight);
+	.attr('height', stockHeight)
+	.attr("class", 'centerMin');
 
 const stockSvgG = stockSvg.append("g");
 
@@ -347,7 +350,7 @@ const stockXEx = d3.extent(data, d=>d.Date);
 
 
 
-const xStock = d3.scaleTime().domain(stockXEx).range([0, 600]);
+const xStock = d3.scaleTime().domain(stockXEx).range([0, stockWidth]);
 const yStock = d3.scaleLinear().domain(stockYEx).range([600, 0]);
 
 
@@ -370,29 +373,84 @@ const stockLine = d3.line()
 
 
 
+var yAxis = d3.axisLeft().scale(yStock).ticks(19);
+
+stockSvgG.append('g')
+		.attr('transform', 'translate(50,0)rotate(0)')
+	.style("font-family", "monospace")
+			   	.style("font-size", "10")
+			   				   	// .classed("axis", true)
+			   				   			.call(yAxis)
+
+
+
 	var stockLength = stockLineDef.node().getTotalLength();
 
 
-      stockLineDef.attr('stroke-dasharray', `${stockLength} ${stockLength}`)
-      .attr('stroke-dashoffset', stockLength)
-			.transition()
-  			.ease(d3.easeLinear)
-				.delay(10)
-				.duration(9000)
-                 .style("opacity", 1)
-                .attr('stroke-dashoffset', 0)
+      // stockLineDef.attr('stroke-dasharray', `${stockLength} ${stockLength}`)
+      // .attr('stroke-dashoffset', stockLength)
+			// .transition()
+  			// .ease(d3.easeLinear)
+				// .delay(10)
+				// .duration(9000)
+                 // .style("opacity", 1)
+                // .attr('stroke-dashoffset', 0)
 
 
 stockSvgG.append('text')
-	.text("Amazon.com Stock Price")
+	.text("20 Years After Going Public, ")
 	.attr("x", xStock(parseTime("1999-05-10")))
-	.attr("y",yStock(300))
+	.attr("y",yStock(1400))
 		.attr("class", "center")
+		.style("font-size", "2.9rem")
+		.style("font-weight", "900")
 		.attr("opacity", 0)
 		.transition()
 		.duration(500)
 		.delay(100)
 		.attr("opacity", 1)
+
+
+stockSvgG.append('text')
+	.text("Amazon.com's Stock Price")
+	.attr("x", xStock(parseTime("1999-05-10")))
+	.attr("y",yStock(1300))
+		.attr("class", "center")
+		.style("font-size", "2.9rem")
+		.style("font-weight", "900")
+		.attr("opacity", 0)
+		.transition()
+		.duration(500)
+		.delay(100)
+		.attr("opacity", 1)
+
+
+stockSvgG.append('text')
+	.text("Reaches for the Sky and")
+	.attr("x", xStock(parseTime("1999-05-10")))
+	.attr("y",yStock(1200))
+		.attr("class", "center")
+		.style("font-size", "2.9rem")
+		.style("font-weight", "900")
+		.attr("opacity", 0)
+		.transition()
+		.duration(500)
+		.delay(100)
+		.attr("opacity", 1)
+
+		stockSvgG.append('text')
+	.text("a Trillion Dollar Valuation")
+	.attr("x", xStock(parseTime("1999-05-10")))
+	.attr("y",yStock(1100))
+		.attr("class", "center")
+		.style("font-size", "2.9rem")
+		.style("font-weight", "900")
+		.attr("opacity", 0)
+		.transition()
+		.duration(500)
+		.delay(100)
+		.attr("opacity", 1)
+
 
 
 stockSvgG.append('text')
@@ -402,7 +460,31 @@ stockSvgG.append('text')
 	.attr("class", "anno")
 		.attr("opacity", 0)
 		.transition()
-		.delay(300)
+		.delay(100)
+				.duration(500)
+
+		.attr("opacity", 1)
+
+		stockSvgG.append('text')
+	.text("2002")
+	.attr("x", xStock(parseTime("2002-01-30")))
+	.attr("y",yStock(35))
+	.attr("class", "anno")
+		.attr("opacity", 0)
+		.transition()
+		.delay(100)
+				.duration(500)
+
+		.attr("opacity", 1)
+
+		stockSvgG.append('text')
+	.text("1999")
+	.attr("x", xStock(parseTime("1999-08-30")))
+	.attr("y",yStock(120))
+	.attr("class", "anno")
+		.attr("opacity", 0)
+		.transition()
+		.delay(100)
 				.duration(500)
 
 		.attr("opacity", 1)
@@ -410,12 +492,12 @@ stockSvgG.append('text')
 
 stockSvgG.append('text')
 	.text("2008")
-	.attr("x", xStock(parseTime("2008-09-30")))
-	.attr("y",yStock(100))
+	.attr("x", xStock(parseTime("2008-11-30")))
+	.attr("y",yStock(90))
 		.attr("class", "anno")
 		.attr("opacity", 0)
 		.transition()
-		.delay(2000)
+		.delay(100)
 				.duration(500)
 
 		.attr("opacity", 1)
@@ -426,13 +508,13 @@ stockSvgG.append('text')
 	stockSvgG.append('text')
 	.text("2013")
 	.attr("x", xStock(parseTime("2013-01-30")))
-	.attr("y",yStock(500))
+	.attr("y",yStock(300))
 		.attr("class", "anno")
 				.attr("opacity", 0)
 		.transition()
 				.duration(500)
 
-		.delay(5000)
+		.delay(100)
 		.attr("opacity", 1)
 
 
@@ -445,7 +527,7 @@ stockSvgG.append('text')
 				.attr("opacity", 0)
 		.transition()
 		.duration(500)
-		.delay(7000)
+		.delay(100)
 		.attr("opacity", 1)
 
 
@@ -458,8 +540,58 @@ stockSvgG.append('text')
 				.attr("opacity", 0)
 		.transition()
 		.duration(500)
-		.delay(8000)
+		.delay(100)
 		.attr("opacity", 1)
+
+
+
+// ###Annotations
+
+
+const type = d3.annotationLabel;
+
+
+const annotations = [{"x":374,"y":572,"dx":38,"dy":-63,"connector":{"end":"arrow","type":"curve","points":[[33.66666666666667,-36.66666666666666],[40.333333333333336,-64.33333333333333]]},"note":{"label":"After the company nearly goes bankrupt, Amazon closes distribution centers and lays off 14% of its workforce","title":""}},{"x":762,"y":553,"dx":31,"dy":-91,"connector":{"end":"arrow","type":"curve","points":[[15.333333333333329,-38],[28.666666666666657,-65]]},"note":{"label":"Amazon Prime launches and will become the world's most powerful loyalty program.","title":""}},{"x":448,"y":573,"dx":146,"dy":-117,"connector":{"end":"arrow","type":"curve","points":[[50,-14],[124,-45]]},"note":{"label":"As the dot-com bust wears on, Amazon launches Amazon Web Services, which grows into a $17 billion business.","title":""}},{"x":1170,"y":81,"dx":-191,"dy":34.000003814697266,"connector":{"end":"arrow","type":"curve","points":[[-62.66666666666663,24],[-101.33333333333331,30.00000762939453]]},"note":{"label":"Amazon signals an intention to go big into grocery and buys Whole Foods for $13.7 billion","title":""}},{"x":1149,"y":173,"dx":-30,"dy":229,"connector":{"end":"arrow","type":"curve","points":[[19.666666666666686,71.33334859212239],[3.333333333333343,149.66665140787757]]},"note":{"label":"Bezos first surpasses Bill Gates to become the richest man on earth en route to $100 billion.","title":""}},{"x":950,"y":437,"dx":25,"dy":-89,"connector":{"end":"arrow","type":"curve","points":[[5.666666666666686,-19.666666666666686],[16.33333333333337,-65.33333333333334]]},"note":{"label":"Amazon goes big into robotics and buys Kiva Systems for $775 million.","title":""}},{"x":145,"y":551,"dx":2,"dy":-98,"type": d3.annotationCalloutCircle,"connector":{"end":"arrow","type":"curve","points":[[-10.333333333333314,-65.66666666666669],[-4.666666666666629,-86.33333333333334]]},"subject":{"radius":44.89949493661172},"note":{"label":"After going public in 1997, the internet boom propels shares from $1.50 to more than $100. ","title":""}}]
+// const annotations = [{"x":391,"y":584,"dx":46,"dy":-143,"connector":{"end":"arrow","type":"curve","points":[[33.66666666666667,-36.66666666666666],[40.333333333333336,-64.33333333333333]]},"note":{"label":"After the company nearly went bankrupt, Amazon closes distribution centers and lays off 14% of the Amazon workforce","title":""}},{"x":762,"y":553,"dx":31,"dy":-91,"connector":{"end":"arrow","type":"curve","points":[[27.33333333333333,-33],[35.66666666666666,-62]]},"note":{"label":"Amazon Prime launches: membership for $79/year that will grow into one of the world's most powerful loyalty programs.","title":""}},{"x":526,"y":573,"dx":83,"dy":-101,"connector":{"end":"arrow","type":"curve","points":[[34,-28],[64,-60]]},"note":{"label":"While the dot-com bust wears on, Amazon launches Amazon Web Services, which will grow by 2017 into a $17 billion dollar business.","title":""}},{"x":1499,"y":71,"dx":-189,"dy":9,"connector":{"end":"arrow","type":"curve","points":[[-41.666666666666664,12],[-110.33333333333331,12]]},"note":{"label":"Amazon signals its intention to go big into grocery and buys Whole Foods for $13.7 billion","title":""}},{"x":1517,"y":170,"dx":33,"dy":134,"connector":{"end":"arrow","type":"curve","points":[[43.66666666666667,38.33333333333333],[33.33333333333334,79.66666666666666]]},"note":{"label":"Bezos first surpasses Bill Gates to become the richest man on earth, before becoming the world's first centi-billionare.","title":""}},{"x":1043,"y":509,"dx":55,"dy":-96,"connector":{"end":"arrow","type":"curve","points":[[16.666666666666686,-53.666666666666686],[38.33333333333337,-76.33333333333334]]},"note":{"label":"Amazon gets serious about robotics and buys Kiva Systems for $775 million.","title":""}},{"x":168,"y":553,"dx":2,"dy":-103,"type": d3.annotationCalloutCircle, "connector":{"end":"arrow","type":"curve","points":[[-10.333333333333314,-59.666666666666686],[-14.666666666666629,-81.33333333333334]]},"subject":{"radius":44.89949493661172},"note":{"label":"After going public in 1997, internet boom takes the share value from $1.50 to more than $100/share. ","title":""}}]
+
+
+// const parseTime = d3.timeParse("%d-%b-%y")
+// const timeFormat = d3.timeFormat("%d-%b-%y")
+
+//Skipping setting domains for sake of example
+// const x = d3.scaleTime().range([0, 800])
+// const y = d3.scaleLinear().range([300, 0])
+
+window.makeAnnotations = d3.annotation()
+  .editMode(false)
+  .type(type)
+  .textWrap(160)
+  //accessors & accessorsInverse not needed
+  //if using x, y in annotations JSON
+  // .accessors({
+  //   x: d => xStock(parseTime("2017-06-30")),
+  //   y: d => yStock(d.Close)
+  // })
+  // .accessorsInverse({
+  //    Date: d => timeFormat(xStock.invert(d.x)),
+  //    Close: d => yStock.invert(d.y)
+  // })
+  .annotations(annotations)
+
+
+
+stockSvgG.append("g")
+  .attr("class", "annotation-group")
+  .attr("class", "ag")
+  .call(makeAnnotations)
+
+// console.log(makeAnnotations.json());
+makeAnnotations.json();
+// console.log('makeAnnotations');
+
+
+
+
 
 
 }
@@ -663,7 +795,7 @@ svgG.selectAll('rect')
 	.attr("y", d=>200-y2(0))
 		.attr("width",3)
 	.attr("fill", d=> d.sentiment>0 ? "#1a9850" : "#b2182b")
-	.attr("opacity", .5)
+	.attr("opacity", .7)
 	.transition()
 	.attr("transform", "translate(" + 20 + "," + 0 + ")")
 
@@ -773,7 +905,7 @@ const f2014 = data.filter(d=>d.year==2014);
 const f2015 = data.filter(d=>d.year==2015);
 const f2016 = data.filter(d=>d.year==2016);
 
-const x3 = d3.scaleLinear().domain([0,1000]).range([60,620]);
+const x3 = d3.scaleLinear().domain([0,1000]).range([60,400]);
 
 
 function fear(el, data, color, yer) {
@@ -792,8 +924,8 @@ svgG3.selectAll('rect')
 	.append('rect')
 	.attr('x', 0)
 	.attr('y', 0)
-	.attr('height', 18)
-	.attr("width", 2)
+	.attr('height', 15)
+	.attr("width", 3)
 	.attr("opacity", .4)
 	.attr("fill", color)
 	.transition()
@@ -853,6 +985,14 @@ scene3.reverse(false);
 var controller = new ScrollMagic.Controller();
 
 
+
+
+function showYear (im) {
+
+	var doc = document.getElementById(im);
+	doc.innerHTML()
+
+}
 
 
 
